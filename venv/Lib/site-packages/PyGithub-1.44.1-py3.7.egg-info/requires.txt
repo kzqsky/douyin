@@ -1,0 +1,7 @@
+deprecated
+pyjwt
+requests>=2.14.0
+six
+
+[integrations]
+cryptography
