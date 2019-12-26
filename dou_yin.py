@@ -26,7 +26,7 @@ package_name = 'com.ss.android.ugc.aweme'
 activity_name = 'com.ss.android.ugc.aweme.splash.SplashActivity'
 
 # 一条视频识别的最长时间
-RECOGNITE_TOTAL_TIME = 10
+RECOGNITE_TOTAL_TIME = 12
 
 poco = AndroidUiautomationPoco(use_airtest_input=True, screenshot_each_action=False)
 
@@ -62,11 +62,11 @@ if __name__ == '__main__':
     time.sleep(5)
 
     while True:
-        time.sleep(0.5)
+        time.sleep(5)
         if is_a_ad():
             print('这是一条广告，过滤~')
             play_next_video()
-            time.sleep(0.5)
+            time.sleep(5)
 
         # 开始识别的时间
         recognite_time_start = datetime.now()
@@ -79,7 +79,7 @@ if __name__ == '__main__':
             if is_a_ad():
                 print('这是一条广告，过滤~')
                 play_next_video()
-                time.sleep(0.5)
+                time.sleep(5)
             # 获取截图
             print('开始第%d次截图' % recognite_count)
 
@@ -115,7 +115,7 @@ if __name__ == '__main__':
 
         # 播放下一条视频
         print('==' * 30)
-        time.sleep(0.5)
+        time.sleep(2)
         print('准备播放下一个视频~')
         play_next_video()
-        time.sleep(0.5)
+        time.sleep(2)
